@@ -26,10 +26,10 @@ export const Footer: React.FC = () => {
           {/* Nav links mirror */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-white">
             <a href="#metodo" className="hover:text-[#D6BE96] transition-colors">O Método 3²</a>
-            <a href="#modulos" className="hover:text-[#D6BE96] transition-colors">8 Módulos</a>
-            <a href="#simulador" className="hover:text-[#D6BE96] transition-colors">Diagnóstico</a>
+            <a href="#conteudos" className="hover:text-[#D6BE96] transition-colors">Conteúdos</a>
+            <a href="#simulador" className="hover:text-[#D6BE96] transition-colors">Régua de Faturamento</a>
             <a href="#mentor" className="hover:text-[#D6BE96] transition-colors">O Mentor</a>
-            <a href="#oferta" className="hover:text-[#D6BE96] transition-colors">Planos de Inscrição</a>
+            <a href="#oferta" className="hover:text-[#D6BE96] transition-colors">Inscrição & Mentoria</a>
             <a href="#faq" className="hover:text-[#D6BE96] transition-colors">Dúvidas</a>
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-[#D6BE96] hover:underline font-black">
               Comprar Agora →

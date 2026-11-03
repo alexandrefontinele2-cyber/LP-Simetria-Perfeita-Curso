@@ -1,26 +1,12 @@
 export const CHECKOUT_URL = 'https://pay.cakto.com.br/3czvimn_919773';
 export const OFFICIAL_WEBSITE_URL = 'https://fontenelleacademy.com.br/';
+export const MENTORIA_WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=5543988628997&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20mentoria%20com%20Alexandre%20Fontinele.';
 
-export interface ModuleItem {
+export interface CourseTopicItem {
   id: number;
-  numberTag: string;
   title: string;
   subtitle: string;
-  duration: string;
-  deliverable: string;
-  lessons: string[];
-}
-
-export interface PlanItem {
-  id: string;
-  name: string;
-  tag: string;
-  featured: boolean;
-  originalPrice: string;
-  installments: string;
-  cashPrice: string;
-  benefits: string[];
-  ctaText: string;
+  topics: string[];
 }
 
 export interface FaqItem {
@@ -34,12 +20,12 @@ export const HERO_CHAPTERS = [
     number: '01',
     title: 'O Grande Gargalo Oculto das Clínicas de Estética',
     subtitle: 'Por que profissionais excelentes continuam com caixa apertado e agenda desorganizada',
-    badge: 'Módulo de Diagnóstico'
+    badge: 'Diagnóstico Operacional'
   },
   {
     number: '02',
     title: 'A Metodologia do Método 3²',
-    subtitle: 'O alinhamento dos 3 pilares fundamentais: Estrutura, Performance e Experiência',
+    subtitle: 'O alinhamento dos pilares fundamentais: Estrutura, Performance e Experiência',
     badge: 'O Núcleo Estratégico'
   },
   {
@@ -71,8 +57,8 @@ export const THREE_PILLARS = [
   },
   {
     number: '02',
-    pillar: 'PILAR 2: PERFORMANCE COMERCIAL',
-    subtitle: 'Vendas Estratégicas & Recepção Ativa',
+    pillar: 'PILAR 2: PERFORMANCE COMERCIAL E DE MARKETING',
+    subtitle: 'Vendas Estratégicas, Marketing & Recepção Ativa',
     description: 'Transforme o WhatsApp e a recepção em uma central ativa de fechamento de consultas e planos de tratamento completos, reduzindo o no-show e elevando a conversão.',
     highlights: [
       'Scripts validados de primeiro contato para responder "quanto custa?"',
@@ -83,7 +69,7 @@ export const THREE_PILLARS = [
   },
   {
     number: '03',
-    pillar: 'PILAR 3: JORNADA DO CLIENTE & ENCANTAMENTO',
+    pillar: 'PILAR 3: EXPERIÊNCIA DO CLIENTE E FIDELIZAÇÃO',
     subtitle: 'Fidelização & Indicação Espontânea',
     description: 'Crie uma experiência sensorial inesquecível desde o primeiro clique até o pós-procedimento, transformando pacientes em defensores fiéis da sua marca.',
     highlights: [
@@ -95,29 +81,23 @@ export const THREE_PILLARS = [
   }
 ];
 
-export const COURSE_MODULES_8: ModuleItem[] = [
+export const COURSE_CONTENT_LIST: CourseTopicItem[] = [
   {
     id: 1,
-    numberTag: 'MÓDULO 01',
     title: 'O Método 3² & Diagnóstico da sua Clínica',
     subtitle: 'Identificação dos gargalos invisíveis que travam o crescimento da sua clínica',
-    duration: '2h 15m',
-    deliverable: 'Mapa de Diagnóstico da Clínica',
-    lessons: [
-      'Apresentação e fundamentos do Método 3²',
-      'Diagnóstico operacional e mapeamento de gargalos',
+    topics: [
+      'Fundamentos e pilares do Método 3²',
+      'Diagnóstico operacional completo da sua clínica',
       'A transição do dono operacional para o gestor estratégico',
       'Alinhamento entre Estrutura, Performance e Experiência'
     ]
   },
   {
     id: 2,
-    numberTag: 'MÓDULO 02',
     title: 'Definindo suas Metas & Rotina Harmoniosa',
     subtitle: 'Como planejar o crescimento e organizar o dia a dia sem sobrecarga',
-    duration: '2h 30m',
-    deliverable: 'Cronograma de Rotina Harmoniosa',
-    lessons: [
+    topics: [
       'Metodologia de metas para clínicas de estética',
       'Organização da agenda do gestor e dos profissionais',
       'Eliminação do desperdício de tempo e tarefas desnecessárias',
@@ -126,26 +106,20 @@ export const COURSE_MODULES_8: ModuleItem[] = [
   },
   {
     id: 3,
-    numberTag: 'MÓDULO 03',
     title: 'Indicadores e Controle da Operação',
     subtitle: 'Acompanhe a saúde do seu negócio com dados simples e objetivos',
-    duration: '2h 45m',
-    deliverable: 'Painel de Indicadores Clínicos',
-    lessons: [
+    topics: [
       'Os principais indicadores que todo dono de clínica deve monitorar',
       'Controle de comparecimento, faltas e reagendamentos',
       'Acompanhamento de conversão por canal de captação',
-      'Como tomar decisões estratégicas baseadas em fatos'
+      'Tomada de decisões estratégicas baseada em fatos'
     ]
   },
   {
     id: 4,
-    numberTag: 'MÓDULO 04',
     title: 'A Secretária de Alta Performance no WhatsApp',
     subtitle: 'Transformando sua recepção em uma central ativa de fechamento',
-    duration: '3h 15m',
-    deliverable: 'Playbook Completo de Mensagens WhatsApp • Tabela de Metas & Comissões',
-    lessons: [
+    topics: [
       'Scripts de primeiro contato: como responder o "quanto custa o botox?"',
       'Protocolo anti-no-show: reduzindo faltas de 40% para menos de 8%',
       'Treinamento prático de atendimento ágil, humanizado e refinado',
@@ -154,12 +128,9 @@ export const COURSE_MODULES_8: ModuleItem[] = [
   },
   {
     id: 5,
-    numberTag: 'MÓDULO 05',
-    title: 'Fluxos, Processos & Funções da Equipe',
+    title: 'Fluxos, Processos e Definição das Funções',
     subtitle: 'Treinamento, capacitação e alinhamento do time de atendimento',
-    duration: '2h 40m',
-    deliverable: 'Manual de Funções e Processos da Equipe',
-    lessons: [
+    topics: [
       'Mapeamento dos fluxos de trabalho da recepção à cabine de atendimento',
       'Definição clara das responsabilidades de cada função',
       'Roteiro de treinamento contínuo para colaboradoras',
@@ -168,12 +139,9 @@ export const COURSE_MODULES_8: ModuleItem[] = [
   },
   {
     id: 6,
-    numberTag: 'MÓDULO 06',
     title: 'Jornada de Encantamento & Retenção 5 Estrelas',
-    subtitle: 'A experiência sensorial que gera fidelização e indicações espontâneas',
-    duration: '3h 00m',
-    deliverable: 'Checklist de Design Sensorial e Pós-Procedimento',
-    lessons: [
+    subtitle: 'A experiência sensorial que gera fidelização eterna e indicações',
+    topics: [
       'Design sensorial da clínica: olfato, som ambiente, recepção e conforto',
       'Ritual de acolhimento e café de boas-vindas refinado',
       'Protocolos de pós-atendimento D+1 e D+7 que geram extrema segurança',
@@ -182,12 +150,9 @@ export const COURSE_MODULES_8: ModuleItem[] = [
   },
   {
     id: 7,
-    numberTag: 'MÓDULO 07',
-    title: 'Marketing Consciente & Autoridade',
-    subtitle: 'Posicionamento refinado no Instagram e captação inteligente',
-    duration: '2h 50m',
-    deliverable: 'Guia de Posicionamento e Marketing Consciente',
-    lessons: [
+    title: 'Marketing Consciente & Posicionamento',
+    subtitle: 'Posicionamento refinado no Instagram e autoridade estética',
+    topics: [
       'Posicionamento no Instagram como autoridade médica e estética refinada',
       'Comunicação visual e verbal alinhada ao público ideal',
       'Como atrair pacientes qualificados sem depender de promoções apelativas',
@@ -196,57 +161,14 @@ export const COURSE_MODULES_8: ModuleItem[] = [
   },
   {
     id: 8,
-    numberTag: 'MÓDULO 08',
     title: 'Expansão, Equipe & Escala da Clínica (Desafio 90 Dias)',
     subtitle: 'Como sair do operacional e construir uma clínica que funciona sem você',
-    duration: '3h 10m',
-    deliverable: 'Plano de Ação Desafio 90 Dias',
-    lessons: [
+    topics: [
       'O passo a passo para delegar tarefas e sair do operacional diário',
       'Estruturação para expansão sustentável da clínica',
       'O Desafio 90 Dias de implementação guiada do Método 3²',
       'Consolidação de uma clínica organizada por fora e por dentro'
     ]
-  }
-];
-
-export const PLANS: PlanItem[] = [
-  {
-    id: 'completo',
-    name: 'SIMETRIA PERFEITA COMPLETO',
-    tag: 'MAIS ESCOLHIDO',
-    featured: true,
-    originalPrice: 'R$ 1.197,00',
-    installments: '12x de R$ 41,01',
-    cashPrice: 'R$ 397 à vista',
-    benefits: [
-      'Acesso Imediato a Todos os 8 Módulos Completos (22h de Conteúdo)',
-      'Planilha Inteligente de Precificação 3² (Valor R$ 997)',
-      'Playbook de Scripts de WhatsApp da Secretária (Valor R$ 497)',
-      'Suporte Prioritário para Dúvidas na Plataforma',
-      'Garantia Incondicional de 7 Dias (Risco Zero)',
-      'Certificado Oficial Fontenelle Academy'
-    ],
-    ctaText: 'QUERO TRANSFORMAR MINHA CLÍNICA AGORA'
-  },
-  {
-    id: 'vip',
-    name: 'PLANO VIP COM MENTORIA & ANÁLISE INDIVIDUAL',
-    tag: 'VAGAS LIMITADAS',
-    featured: false,
-    originalPrice: 'R$ 4.997,00',
-    installments: '12x de R$ 199,30',
-    cashPrice: 'R$ 1.997 à vista',
-    benefits: [
-      'Tudo incluído no Plano Completo Simetria Perfeita',
-      'Sessão Estratégica Individual 1 a 1 de Diagnóstico Clínico',
-      'Mentoria quinzenal de 2 meses com Alexandre Fontinele para fortalecer sua clínica',
-      'Auditoria dos Scripts de WhatsApp da sua Recepção',
-      'Estratégias de marketing, redes sociais, Google, abordagens, atendimento e jornada do cliente',
-      'Acesso Vitalício ao Conteúdo e Todas as Futuras Atualizações',
-      'Linha Direta de WhatsApp VIP com time de Mentores'
-    ],
-    ctaText: 'QUERO O PLANO VIP COM ANÁLISE INDIVIDUAL'
   }
 ];
 
@@ -269,7 +191,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 4,
     question: '4. Por quanto tempo terei acesso ao conteúdo?',
-    answer: 'No Plano Completo você tem 1 ano inteiro de acesso ilimitado para assistir no computador, celular ou tablet quantas vezes quiser. No Plano VIP o acesso é vitalício.'
+    answer: 'Você tem 1 ano inteiro de acesso ilimitado para assistir no computador, celular ou tablet quantas vezes quiser.'
   },
   {
     id: 5,
@@ -279,16 +201,16 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 6,
     question: '6. Como funciona a Garantia Blindada de 7 Dias?',
-    answer: 'Você tem 7 dias completos para testar tudo. Se não ficar 100% satisfeito, basta solicitar na plataforma ou enviar uma mensagem que reembolsamos todo o dinheiro, sem complicação.'
+    answer: 'Você tem 7 dias completos para testar tudo. Se não ficar 100% satisfeito, basta enviar um e-mail ou solicitar na plataforma que reembolsamos todo o dinheiro, sem complicação.'
   },
   {
     id: 7,
     question: '7. Terei suporte para tirar dúvidas durante o curso?',
-    answer: 'Sim! Abaixo de cada aula há um campo de dúvidas com suporte técnico, além das mentorias e da comunidade exclusiva de alunos.'
+    answer: 'Sim! Abaixo de cada aula há um campo de dúvidas com suporte técnico, além das mentorias mensais ao vivo no Zoom com Alexandre Fontinele e a Comunidade VIP de alunos.'
   },
   {
     id: 8,
     question: '8. Quais são as formas de pagamento disponíveis?',
-    answer: 'Cartão de Crédito em até 12x (podendo dividir em até 2 cartões) e PIX à vista com liberação imediata.'
+    answer: 'Cartão de Crédito em até 12x (podendo dividir em até 2 cartões) e PIX à vista com liberação imediata e 10% de desconto.'
   }
 ];

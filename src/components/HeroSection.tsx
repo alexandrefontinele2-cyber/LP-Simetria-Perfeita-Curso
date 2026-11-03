@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX, ShieldCheck, Zap, Lock, Award, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, ShieldCheck, Zap, Lock, Award, ArrowRight } from 'lucide-react';
 import { CHECKOUT_URL, HERO_CHAPTERS } from '../data/landingData';
 
 export const HeroSection: React.FC = () => {
@@ -37,20 +37,23 @@ export const HeroSection: React.FC = () => {
             </span>
           </div>
 
-          {/* Main Headline */}
+          {/* Main Headline without dash */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#0B0D12] tracking-tight leading-[1.1] max-w-5xl text-balance font-display">
-            Tenha uma Clínica linda por fora e por dentro — <span className="block mt-2"><span className="mk">o modelo que organiza sua clínica, sua rotina, da sua equipe e te faz faturar mais.</span></span>
+            Tenha uma Clínica linda por fora e por dentro <span className="block mt-2"><span className="mk">o modelo que organiza sua clínica, sua rotina, da sua equipe e te faz faturar mais.</span></span>
           </h1>
 
           {/* Subheadline */}
-          <p className="mt-6 text-base sm:text-lg md:text-xl text-[#3B3F4A] max-w-3xl leading-relaxed text-balance font-medium">
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-[#1E2833] max-w-3xl leading-relaxed text-balance font-bold">
             Domine os pilares da <strong>Gestão</strong>, <strong>Performance Comercial</strong> e <strong>Marketing</strong> para escalar o seu faturamento com segurança e organização.
           </p>
         </div>
 
-        {/* Video / VSL Showcase Player inside Neo-brutalist Object */}
+        {/* Video / Showcase Player inside Neo-brutalist Object */}
         <div className="mt-6 max-w-4xl mx-auto">
-          <div className="nb bg-[#8495A6] text-white border-4 border-[#0B0D12] shadow-[8px_8px_0_#0B0D12] overflow-hidden relative">
+          <div 
+            style={{ backgroundColor: '#8495A6', color: '#FFFFFF' }}
+            className="nb-cinza-azul text-white border-4 border-[#0B0D12] shadow-[8px_8px_0_#0B0D12] overflow-hidden relative rounded-2xl"
+          >
             
             {/* Top Bar inside Player */}
             <div className="bg-[#5B6D7E] px-4 py-3 flex items-center justify-between border-b-2 border-[#0B0D12] text-xs font-mono text-white">
@@ -63,24 +66,23 @@ export const HeroSection: React.FC = () => {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="font-mono text-[11px] opacity-90">
+                <span className="font-mono text-[11px] text-white font-bold">
                   Etapa {currentSlideIndex + 1} de {HERO_CHAPTERS.length}
                 </span>
                 <button
                   onClick={() => setIsMuted(!isMuted)}
-                  className="p-1 hover:text-white transition-colors cursor-pointer"
+                  className="p-1 hover:text-[#D6BE96] transition-colors cursor-pointer"
                   title={isMuted ? 'Desmutar' : 'Mutar'}
                   aria-label="Controle de áudio"
                 >
-                  {isMuted ? <VolumeX className="w-4 h-4 text-white/70" /> : <Volume2 className="w-4 h-4 text-[#D6BE96]" />}
+                  {isMuted ? <VolumeX className="w-4 h-4 text-white" /> : <Volume2 className="w-4 h-4 text-[#D6BE96]" />}
                 </button>
               </div>
             </div>
 
-            {/* Video Viewport Simulated Screen with Azul Acinzentado Background */}
+            {/* Video Viewport Simulated Screen */}
             <div className="relative aspect-video w-full bg-[#485766] flex flex-col items-center justify-center p-6 sm:p-12 text-center select-none overflow-hidden">
               
-              {/* Subtle background tech grid */}
               <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#D6BE96_1.5px,transparent_1.5px)] [background-size:20px_20px]" />
               
               {/* Floating badge stamp */}
@@ -92,20 +94,20 @@ export const HeroSection: React.FC = () => {
 
               {/* Dynamic Slide Content */}
               <div className="relative z-10 max-w-xl transition-all duration-300">
-                <span className="text-xs font-mono font-bold text-[#D6BE96] uppercase tracking-wider block mb-1">
-                  Módulo 0{current.number}
+                <span className="text-xs font-mono font-black text-[#D6BE96] uppercase tracking-wider block mb-1">
+                  Capítulo {current.number}
                 </span>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-display tracking-tight leading-snug">
                   {current.title}
                 </h3>
-                <p className="mt-3 text-sm sm:text-base text-neutral-100 leading-relaxed max-w-lg mx-auto font-medium">
+                <p className="mt-3 text-sm sm:text-base text-white leading-relaxed max-w-lg mx-auto font-medium">
                   {current.subtitle}
                 </p>
 
                 {/* Highlight stamp */}
-                <div className="mt-6 inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/15 border-2 border-[#0B0D12] shadow-[3px_3px_0_#0B0D12]">
+                <div className="mt-6 inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/20 border-2 border-[#0B0D12] shadow-[3px_3px_0_#0B0D12]">
                   <Award className="w-4 h-4 text-[#D6BE96]" />
-                  <span className="text-xs sm:text-sm font-bold text-white font-mono">
+                  <span className="text-xs sm:text-sm font-black text-white font-mono">
                     Método 3² • Fontenelle Academy
                   </span>
                 </div>
@@ -114,7 +116,7 @@ export const HeroSection: React.FC = () => {
               {/* Play / Pause Interactive Overlay button */}
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="absolute bottom-6 left-6 z-20 flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#0B0D12]/80 hover:bg-[#0B0D12] border-2 border-white/30 text-white text-xs font-bold transition-all active:scale-95 cursor-pointer"
+                className="absolute bottom-6 left-6 z-20 flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#0B0D12] border-2 border-white/40 text-white text-xs font-bold transition-all active:scale-95 cursor-pointer"
               >
                 {isPlaying ? <Pause className="w-3.5 h-3.5 text-[#D6BE96]" /> : <Play className="w-3.5 h-3.5 text-[#D6BE96]" />}
                 <span>{isPlaying ? 'Pausar Demonstração' : 'Continuar Apresentação'}</span>
@@ -129,8 +131,8 @@ export const HeroSection: React.FC = () => {
                       setCurrentSlideIndex(idx);
                       setProgress(0);
                     }}
-                    className={`h-3 rounded-full transition-all border border-white/50 cursor-pointer ${
-                      idx === currentSlideIndex ? 'bg-[#D6BE96] w-8 border-[#0B0D12]' : 'bg-white/40 w-3 hover:bg-white/70'
+                    className={`h-3 rounded-full transition-all border border-white cursor-pointer ${
+                      idx === currentSlideIndex ? 'bg-[#D6BE96] w-8 border-[#0B0D12]' : 'bg-white/50 w-3 hover:bg-white'
                     }`}
                     aria-label={`Capítulo ${idx + 1}`}
                   />
@@ -138,7 +140,7 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Progress bar at the bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-black/20">
+              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-black/30">
                 <div 
                   className="h-full bg-[#D6BE96] transition-all duration-200"
                   style={{ width: `${progress}%` }}
@@ -153,11 +155,11 @@ export const HeroSection: React.FC = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-[#D6BE96] inline-block animate-pulse" />
                 <span>Simetria Perfeita: Gestão, Comercial & Marketing</span>
                 <span className="text-white/60">·</span>
-                <span className="text-white/90 font-medium">Alexandre Fontinele</span>
+                <span className="text-white font-medium">Alexandre Fontinele</span>
               </div>
 
-              <div className="flex items-center gap-4 text-[11px] text-[#D6BE96] font-mono font-bold">
-                <span>✓ 8 MÓDULOS (22H)</span>
+              <div className="flex items-center gap-4 text-[11px] text-[#D6BE96] font-mono font-black">
+                <span>✓ MÉTODO 3²</span>
                 <span>✓ DESAFIO 90 DIAS</span>
               </div>
             </div>
@@ -180,17 +182,17 @@ export const HeroSection: React.FC = () => {
           </a>
 
           {/* Pricing anchor under CTA */}
-          <div className="mt-4 text-xs sm:text-sm text-[#3B3F4A] font-bold">
+          <div className="mt-4 text-xs sm:text-sm text-[#0B0D12] font-black">
             <span className="text-neutral-500 line-through mr-2">De R$ 1.197,00</span>
-            <span className="text-[#0B0D12]">Por apenas 12x de</span>
+            <span>Por apenas 12x de</span>
             <strong className="text-base sm:text-xl font-black text-[#0B0D12] ml-1 bg-[#D6BE96] px-2 py-0.5 rounded border border-[#0B0D12]">
               R$ 41,01
             </strong>
-            <span className="text-neutral-600 ml-1.5">(ou R$ 397 à vista no Pix)</span>
+            <span className="text-neutral-700 ml-1.5 font-bold">(ou R$ 397 à vista no Pix)</span>
           </div>
 
-          {/* Selos de Confiança */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-bold text-[#0B0D12]">
+          {/* Selos de Confiança (removed Certificado Oficial as requested) */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-black text-[#0B0D12]">
             <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-md border-2 border-[#0B0D12] shadow-[2px_2px_0_#0B0D12]">
               <Zap className="w-3.5 h-3.5 text-[#0B0D12]" />
               <span>Acesso Imediato</span>
@@ -200,8 +202,8 @@ export const HeroSection: React.FC = () => {
               <span>Garantia Incondicional de 7 Dias</span>
             </div>
             <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-md border-2 border-[#0B0D12] shadow-[2px_2px_0_#0B0D12]">
-              <Award className="w-3.5 h-3.5 text-[#0B0D12]" />
-              <span>Certificado Oficial Fontenelle Academy</span>
+              <Lock className="w-3.5 h-3.5 text-[#0B0D12]" />
+              <span>Compra 100% Segura Cakto</span>
             </div>
           </div>
 

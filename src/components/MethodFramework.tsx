@@ -69,17 +69,20 @@ export const MethodFramework: React.FC = () => {
         </div>
 
         {/* Detailed Focus on PILAR 3: JORNADA DO CLIENTE & ENCANTAMENTO */}
-        <div className="nb bg-[#8495A6] text-white p-6 sm:p-10 border-4 border-[#0B0D12] shadow-[8px_8px_0_#0B0D12]">
+        <div 
+          style={{ backgroundColor: '#8495A6', color: '#FFFFFF' }}
+          className="nb-cinza-azul text-white p-6 sm:p-10 border-4 border-[#0B0D12] rounded-2xl shadow-[8px_8px_0_#0B0D12]"
+        >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b-2 border-[#0B0D12]">
             <div>
-              <span className="adesivo text-[10px] mb-2 inline-block">
+              <span className="adesivo text-[10px] text-[#0B0D12] font-black mb-2 inline-block">
                 ★ Destaque Metodológico
               </span>
               <h3 className="text-2xl sm:text-3xl font-black font-display text-white">
-                Pilar 3: Jornada do Cliente & Encantamento
+                Pilar 3: Experiência do Cliente e Fidelização
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-100 font-medium mt-1">
-                Fidelização & Indicação Espontânea: Crie uma experiência sensorial inesquecível desde o primeiro clique até o pós-procedimento.
+              <p className="text-xs sm:text-sm text-white font-semibold mt-1">
+                Fidelização & Indicação Espontânea: Crie uma experiência sensorial inesquecível desde o primeiro contato até o pós-procedimento.
               </p>
             </div>
 

@@ -29,17 +29,17 @@ export const Header: React.FC = () => {
           <a href="#metodo" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
             Método 3²
           </a>
-          <a href="#modulos" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Grade (8 Módulos)
+          <a href="#conteudos" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
+            Conteúdos
           </a>
           <a href="#simulador" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Diagnóstico de Lucro
+            Régua de Faturamento
           </a>
           <a href="#mentor" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Alexandre Fontinele
+            O Mentor
           </a>
           <a href="#oferta" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Planos & Inscrição
+            Inscrição & Mentoria
           </a>
           <a href="#faq" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
             Dúvidas

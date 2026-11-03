@@ -29,10 +29,10 @@ export const InteractiveEffectsGallery: React.FC = () => {
     {
       id: 1,
       tag: 'Efeito 01',
-      category: 'Módulo 04 · WhatsApp',
+      category: 'Atendimento · WhatsApp',
       title: 'Como Responder: "Quanto custa o Botox?"',
-      headlineMark: 'Do Preço Seco ao Agendamento Confirmado',
-      description: 'Como transformar a resposta da recepção quando o lead pergunta apenas preço. Em vez de passar o valor seco e perder o contato, a secretária acolhe e faz a triagem com elegância.',
+      headlineMark: 'Transformando Mensagens de Preço em Consultas Agendadas',
+      description: 'Como conduzir a resposta da recepção quando o paciente pergunta apenas preço. Em vez de passar o valor seco e perder o contato, a secretária acolhe e faz a triagem com elegância e autoridade.',
       impactMetric: 'Até 1.8x mais conversão',
       chatDialog: [
         {
@@ -47,7 +47,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
         },
         {
           sender: 'clinic',
-          text: 'Para te passar uma estimativa segura, me conta: você já realizou esse procedimento antes ou é a sua primeira avaliação para prevenção e rejuvenescimento natural?',
+          text: 'Para te passar uma estimativa assertiva e segura, me conta: você já realizou esse procedimento antes ou é a sua primeira avaliação para prevenção e rejuvenescimento natural?',
           time: '14:23'
         },
         {
@@ -68,7 +68,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
     {
       id: 2,
       tag: 'Efeito 02',
-      category: 'Módulo 04 · Anti-No-Show',
+      category: 'Recepção · Anti-No-Show',
       title: 'Protocolo Anti-No-Show',
       headlineMark: 'Reduzindo Faltas de 40% para Menos de 8%',
       description: 'Mensagens automatizadas e impessoais fazem os pacientes desmarcarem de última hora. O protocolo humanizado do Método 3² cria compromisso afetivo e zera as salas vazias.',
@@ -92,7 +92,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
     {
       id: 3,
       tag: 'Efeito 03',
-      category: 'Módulo 03 · Comercial',
+      category: 'Comercial · Avaliação',
       title: 'Como Dobrar o Ticket Médio na Avaliação',
       headlineMark: 'Migração de Procedimento Avulso para Plano Anual',
       description: 'Apresente o tratamento em formato de programa de cuidado continuado. O paciente compreende que o resultado sustentável depende de um plano estruturado.',
@@ -114,7 +114,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
     {
       id: 4,
       tag: 'Efeito 04',
-      category: 'Módulo 06 · Recepção',
+      category: 'Experiência · Recepção',
       title: 'Experiência Sensorial na Recepção',
       headlineMark: 'Assinatura Olfativa & Hotelaria 5 Estrelas',
       description: 'Como alinhar o olfato, som ambiente calibrado, temperatura e acolhimento para transmitir posicionamento de alto padrão desde os primeiros 30 segundos.',
@@ -136,7 +136,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
     {
       id: 5,
       tag: 'Efeito 05',
-      category: 'Pilar 3 · Pós-Venda',
+      category: 'Pilar 3 · Pós-Procedimento',
       title: 'Protocolo de Pós-Procedimento D+1 & D+7',
       headlineMark: 'Acompanhamento Carinhoso que Previne Queixas',
       description: 'O contato ativo nos dias D+1 e D+7 após o procedimento transmite extrema segurança, zera a ansiedade pós-procedimento e consolida a fidelização.',
@@ -221,7 +221,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
             Veja as estratégias em ação. <span className="block mt-1"><span className="mk">{current.headlineMark}</span></span>
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base text-[#3B3F4A] leading-relaxed max-w-xl mx-auto font-medium">
+          <p className="mt-4 text-sm sm:text-base text-[#1E2833] leading-relaxed max-w-xl mx-auto font-bold">
             Você terá acesso exclusivo aos roteiros e processos que organizam a operação da sua clínica e elevam o nível do seu atendimento no WhatsApp e na recepção.
           </p>
         </div>
@@ -242,7 +242,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
                   : 'bg-white text-[#0B0D12] hover:bg-[#D6BE96]/30 shadow-[3px_3px_0_#0B0D12]'
               }`}
             >
-              <span className="font-mono mr-1.5 opacity-80">{item.tag}</span>
+              <span className="font-mono mr-1.5 opacity-90 font-bold">{item.tag}</span>
               <span>{item.title}</span>
             </button>
           ))}
@@ -265,14 +265,14 @@ export const InteractiveEffectsGallery: React.FC = () => {
                     <h4 className="text-sm font-black text-[#0B0D12] leading-tight">
                       Simetria Perfeita · Protocolo Ativo
                     </h4>
-                    <span className="text-[11px] text-[#8495A6] font-bold flex items-center gap-1">
+                    <span className="text-[11px] text-[#0B0D12] font-black flex items-center gap-1">
                       <span className="w-2 h-2 rounded-full bg-[#8495A6] inline-block" />
                       Método 3² • Recepção de Alta Performance
                     </span>
                   </div>
                 </div>
 
-                <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-[#F7F5F0] border-2 border-[#0B0D12]">
+                <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-[#F7F5F0] border-2 border-[#0B0D12] text-[#0B0D12]">
                   {current.tag} / 06
                 </span>
               </div>
@@ -321,7 +321,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
                               {msg.audioDuration}
                             </span>
                           </div>
-                          <p className="text-[11px] italic text-[#0B0D12]/80 border-t border-[#0B0D12]/20 pt-1.5 font-medium">
+                          <p className="text-[11px] italic text-[#0B0D12] border-t border-[#0B0D12]/20 pt-1.5 font-bold">
                             {msg.text}
                           </p>
                         </div>
@@ -329,7 +329,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
                         <p>{msg.text}</p>
                       )}
 
-                      <span className="text-[9px] font-mono opacity-60 block text-right mt-1 font-bold">
+                      <span className="text-[9px] font-mono text-[#0B0D12]/70 block text-right mt-1 font-bold">
                         {msg.time}
                       </span>
                     </div>
@@ -355,15 +355,17 @@ export const InteractiveEffectsGallery: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Effect Explanation & Controls (5 cols with Azul Acinzentado background) */}
-          <div className="lg:col-span-5 nb bg-[#8495A6] text-white p-6 sm:p-8 flex flex-col justify-between border-4 border-[#0B0D12] shadow-[6px_6px_0_#0B0D12]">
+          {/* Right Column: Effect Explanation & Controls (Atendimento · WhatsApp) */}
+          <div 
+            style={{ backgroundColor: '#8495A6', color: '#FFFFFF' }}
+            className="lg:col-span-5 nb-cinza-azul border-4 border-[#0B0D12] rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-[6px_6px_0_#0B0D12]"
+          >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="adesivo text-[10px]">
+                <span className="adesivo text-[10px] text-[#0B0D12] font-black">
                   {current.category}
                 </span>
 
-                {/* Round Nav Buttons */}
                 <div className="flex items-center gap-2">
                   <button
                     onClick={prevEffect}
@@ -388,29 +390,29 @@ export const InteractiveEffectsGallery: React.FC = () => {
                 {current.title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-neutral-100 leading-relaxed mb-6 font-medium">
+              <p className="text-xs sm:text-sm text-white leading-relaxed mb-6 font-semibold">
                 {current.description}
               </p>
 
               {/* Highlights List */}
-              <div className="space-y-2.5 text-xs text-white font-medium">
+              <div className="space-y-2.5 text-xs text-white font-bold">
                 <div className="flex items-start gap-2">
                   <Sparkles className="w-4 h-4 text-[#D6BE96] shrink-0 mt-0.5" />
-                  <span>Sua secretária aprende scripts estruturados para o dia a dia.</span>
+                  <span className="text-white">Sua secretária aprende scripts estruturados para o dia a dia.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#D6BE96] shrink-0 mt-0.5" />
-                  <span>Elimina as faltas na agenda com o protocolo de áudio e cuidado.</span>
+                  <span className="text-white">Elimina as faltas na agenda com o protocolo de áudio e cuidado.</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <MessageSquare className="w-4 h-4 text-[#D6BE96] shrink-0 mt-0.5" />
-                  <span>Processo validado para estética, dermatologia e clínicas médicas.</span>
+                  <span className="text-white">Processo validado para estética, dermatologia e clínicas médicas.</span>
                 </div>
               </div>
             </div>
 
             {/* Bottom CTA to secure all scripts */}
-            <div className="mt-8 pt-6 border-t-2 border-[#0B0D12]/20">
+            <div className="mt-8 pt-6 border-t-2 border-white/30">
               <a
                 href={CHECKOUT_URL}
                 target="_blank"
@@ -420,7 +422,7 @@ export const InteractiveEffectsGallery: React.FC = () => {
                 <span>QUERO ESCALAR MINHA CLÍNICA AGORA</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <span className="text-[10px] text-white/80 block text-center mt-2 font-mono font-medium">
+              <span className="text-[11px] text-white font-bold block text-center mt-2 font-mono">
                 Acesso imediato após confirmação na Cakto
               </span>
             </div>

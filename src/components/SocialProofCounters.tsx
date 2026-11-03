@@ -50,7 +50,7 @@ export const SocialProofCounters: React.FC = () => {
                 <div className="mt-1 font-black text-sm sm:text-base text-[#D6BE96]">
                   {item.label}
                 </div>
-                <div className="text-xs text-white/90 mt-0.5 leading-snug font-medium">
+                <div className="text-xs text-white mt-0.5 leading-snug font-bold">
                   {item.subtext}
                 </div>
               </div>

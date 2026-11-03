@@ -58,7 +58,7 @@ export default function App() {
         {/* 10. Interactive ROI / Diagnóstico de Lucro Clínico */}
         <RoiCalculator />
 
-        {/* 11. Grade Curricular Completa (8 Módulos • 22h de Conteúdo) */}
+        {/* 11. Conteúdos que você vai ter acesso (Simetria Perfeita) */}
         <CourseCurriculum />
 
         {/* 12. Mentor Alexandre Fontinele Authority & Bio */}

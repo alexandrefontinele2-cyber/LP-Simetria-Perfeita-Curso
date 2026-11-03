@@ -44,11 +44,14 @@
 
 /* Neo-brutalist Card Object */
 .nb {
-  background: #FFFFFF;
   border: var(--bw) solid var(--ink);
   border-radius: var(--raio);
   box-shadow: var(--sh) var(--sh) 0 var(--ink);
   transition: transform 0.15s cubic-bezier(0.2, 0.75, 0.2, 1), box-shadow 0.15s cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.nb:not([class*="bg-"]):not([style*="background"]) {
+  background: #FFFFFF;
 }
 
 .nb:hover {
@@ -56,9 +59,17 @@
   box-shadow: calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--ink);
 }
 
-.nb.tinta {
-  background: var(--ac);
-  color: #FFFFFF;
+.nb.tinta,
+.nb-cinza-azul {
+  background-color: var(--ac) !important;
+  color: #FFFFFF !important;
+  border: var(--bw) solid var(--ink);
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+}
+
+.nb-terminal {
+  background-color: #2D3843 !important;
+  color: #FFFFFF !important;
   border: var(--bw) solid var(--ink);
   box-shadow: var(--sh) var(--sh) 0 var(--ink);
 }
