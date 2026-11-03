@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --pp: #F7F5F0;
+    --dot: rgba(11, 13, 18, 0.08);
+    --tex: radial-gradient(circle, var(--dot) 1.5px, transparent 1.9px) 0 0 / 24px 24px;
+    --tex-tinta: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1.4px, transparent 1.9px) 0 0 / 24px 24px;
+    --ink: #0B0D12;
+    --ink6: #3B3F4A;
+    --ink4: #5E626D;
+    --ink2: #D9D4C8;
+    --creme: #F7F5F0;
+    --ac: #8495A6;
+    --ac-dark: #435565;
+    --ac2: #E1E7EE;
+    --mk: #D6BE96;
+    --mk-dark: #C2A473;
+    --ok: #17A354;
+    --no: #E1432F;
+    --cod: #12151C;
+    --cod2: #1C1F26;
+    --fd: 'Space Grotesk', system-ui, sans-serif;
+    --fm: 'IBM Plex Mono', ui-monospace, monospace;
+    --bw: 3.5px;
+    --sh: 6px;
+    --sh-lg: 8px;
+    --raio: 16px;
+    --raio-s: 8px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    accent-color: var(--ac);
+  }
+
+  body {
+    font-family: var(--fd);
+    color: var(--ink);
+    background-color: var(--pp);
+    background-image: var(--tex);
+  }
+}
+
+/* Neo-brutalist Card Object */
+.nb {
+  background: #FFFFFF;
+  border: var(--bw) solid var(--ink);
+  border-radius: var(--raio);
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+  transition: transform 0.15s cubic-bezier(0.2, 0.75, 0.2, 1), box-shadow 0.15s cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.nb:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--ink);
+}
+
+.nb-interactive {
+  cursor: pointer;
+}
+
+.nb-interactive:active {
+  transform: translate(var(--sh), var(--sh));
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.nb.tinta {
+  background: var(--ink);
+  color: #FFFFFF;
+  box-shadow: var(--sh) var(--sh) 0 var(--mk);
+}
+
+.nb.dourado {
+  background: var(--mk);
+  border: var(--bw) solid var(--ink);
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+}
+
+.nb.azul {
+  background: var(--ac);
+  color: #FFFFFF;
+  border: var(--bw) solid var(--ink);
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+}
+
+/* Sticker / Adhesive Stamp */
+.adesivo {
+  display: inline-block;
+  font-family: var(--fd);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--mk);
+  color: var(--ink);
+  border: 2.5px solid var(--ink);
+  border-radius: var(--raio-s);
+  padding: 0.5em 0.8em 0.45em;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-2deg);
+}
+
+.adesivo-azul {
+  background: var(--ac);
+  color: #FFFFFF;
+  border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.adesivo-tinta {
+  background: var(--ink);
+  color: var(--mk);
+  border: 2.5px solid var(--mk);
+  box-shadow: 3px 3px 0 var(--mk);
+}
+
+/* The Highlighter Marker Effect */
+.mk {
+  color: var(--ink);
+  padding: 0 0.12em;
+  margin: 0 -0.06em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: linear-gradient(var(--mk), var(--mk)) no-repeat 0 65% / 100% 86%;
+}
+
+.secao-tinta .mk {
+  color: var(--ink);
+  background: linear-gradient(var(--mk), var(--mk)) no-repeat 0 65% / 100% 86%;
+}
+
+/* Neo-Brutalist 3D Action Button */
+.btn-nb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-decoration: none;
+  background: var(--mk);
+  color: var(--ink);
+  border: var(--bw) solid var(--ink);
+  border-radius: var(--raio);
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 16px 28px;
+  transition: transform 0.12s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.12s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-nb:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: calc(var(--sh) + 3px) calc(var(--sh) + 3px) 0 var(--ink);
+}
+
+.btn-nb:active {
+  transform: translate(var(--sh), var(--sh));
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.btn-nb-blue {
+  background: var(--ac);
+  color: #FFFFFF;
+}
+
+.btn-nb-tinta {
+  background: var(--ink);
+  color: #FFFFFF;
+}
+
+/* Dark Section with Dotted Canvas */
+.secao-tinta {
+  background-color: var(--ink);
+  background-image: var(--tex-tinta);
+  color: #FFFFFF;
+}
+
+/* Infinite Marquee Ticker */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B0D12;
+  border: 2px solid #F7F5F0;
+  border-radius: 4px;
+}

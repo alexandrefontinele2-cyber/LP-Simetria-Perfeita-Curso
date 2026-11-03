@@ -1,0 +1,6 @@
+{
+  "name": "Fontenelle Academy - Gestão de Clínicas de Alta Conversão",
+  "description": "Método comprovado para donos de clínicas: domine o atendimento de excelência no WhatsApp, feche planos de alto valor sem dar desconto e transforme sua clínica em um negócio previsível e lucrativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
