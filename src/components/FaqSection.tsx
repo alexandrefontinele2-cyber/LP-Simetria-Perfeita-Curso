@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { Plus, HelpCircle, MessageCircle } from 'lucide-react';
-import { FAQ_LIST, CHECKOUT_URL } from '../data/landingData';
+import { Plus, ArrowRight } from 'lucide-react';
+import { FAQ_ITEMS, CHECKOUT_URL } from '../data/landingData';
 
-interface FaqSectionProps {
-  onOpenSupport?: () => void;
-}
-
-export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenSupport }) => {
+export const FaqSection: React.FC = () => {
   const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({
     1: true,
     2: true
@@ -26,19 +22,19 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenSupport }) => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <span className="adesivo mb-3 inline-block">
-            ★ Dúvidas? Direto ao Ponto
+            ★ Dúvidas Frequentes Respondidas
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0B0D12] font-display tracking-tight leading-tight">
-            Perguntas Frequentes de <span className="block mt-1"><span className="mk">Donos de Clínicas</span></span>
+            Perguntas Frequentes sobre o <span className="block mt-1"><span className="mk">Simetria Perfeita</span></span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#3B3F4A] font-medium">
-            Tire todas as suas dúvidas antes de garantir sua vaga promocional:
+            Tire todas as suas dúvidas sobre o método, acesso, suporte e garantia:
           </p>
         </div>
 
         {/* Accordion List */}
         <div className="space-y-3.5">
-          {FAQ_LIST.map((faq) => {
+          {FAQ_ITEMS.map((faq) => {
             const isOpen = !!openItems[faq.id];
             return (
               <div
@@ -72,28 +68,25 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenSupport }) => {
           })}
         </div>
 
-        {/* Still have questions card */}
+        {/* Call to action at the bottom of FAQ */}
         <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white border-3 border-[#0B0D12] shadow-[5px_5px_0_#0B0D12] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-[#D6BE96] text-[#0B0D12] flex items-center justify-center shrink-0 border-2 border-[#0B0D12]">
-              <MessageCircle className="w-6 h-6 stroke-[2.5]" />
-            </div>
-            <div>
-              <h4 className="text-base font-black text-[#0B0D12]">
-                Ainda tem alguma dúvida sobre a sua clínica?
-              </h4>
-              <p className="text-xs text-[#5E626D] font-medium">
-                Nossos consultores da Fontenelle Academy atendem você pelo WhatsApp.
-              </p>
-            </div>
+          <div>
+            <h4 className="text-base font-black text-[#0B0D12]">
+              Pronto para colocar sua clínica no padrão que ela merece?
+            </h4>
+            <p className="text-xs text-[#5E626D] font-medium mt-0.5">
+              Garanta sua vaga hoje com a condição especial e acesso imediato.
+            </p>
           </div>
 
-          <button
-            onClick={onOpenSupport}
-            className="px-5 py-3 rounded-xl text-xs sm:text-sm font-black text-[#0B0D12] bg-[#F7F5F0] hover:bg-[#D6BE96] border-2 border-[#0B0D12] shadow-[3px_3px_0_#0B0D12] active:translate-x-0.5 active:translate-y-0.5 transition-all whitespace-nowrap cursor-pointer uppercase"
+          <a
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-nb text-xs sm:text-sm font-black whitespace-nowrap"
           >
-            Falar no WhatsApp
-          </button>
+            QUERO ESCALAR MINHA CLÍNICA AGORA →
+          </a>
         </div>
 
       </div>

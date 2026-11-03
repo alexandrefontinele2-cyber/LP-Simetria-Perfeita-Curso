@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Award, Lock } from 'lucide-react';
+import { ShieldCheck, Award, Lock, ArrowRight } from 'lucide-react';
 import { CHECKOUT_URL } from '../data/landingData';
 
 export const GuaranteeSection: React.FC = () => {
@@ -10,12 +10,12 @@ export const GuaranteeSection: React.FC = () => {
         <div className="nb bg-[#F7F5F0] border-4 border-[#0B0D12] rounded-3xl p-6 sm:p-10 shadow-[6px_6px_0_#0B0D12] flex flex-col sm:flex-row items-center gap-8">
           
           {/* Guarantee Seal Badge */}
-          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-[#0B0D12] border-4 border-[#0B0D12] shadow-[4px_4px_0_#D6BE96] flex flex-col items-center justify-center text-center p-3 text-white shrink-0 relative">
+          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-[#8495A6] border-4 border-[#0B0D12] shadow-[4px_4px_0_#0B0D12] flex flex-col items-center justify-center text-center p-3 text-white shrink-0 relative">
             <ShieldCheck className="w-8 h-8 sm:w-10 sm:h-10 text-[#D6BE96] mb-1 stroke-[2.5]" />
-            <span className="text-xl sm:text-2xl font-black font-display text-[#D6BE96] leading-none">
+            <span className="text-xl sm:text-2xl font-black font-display text-white leading-none">
               7 DIAS
             </span>
-            <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-neutral-300">
+            <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#D6BE96]">
               Garantia Total
             </span>
           </div>
@@ -23,27 +23,28 @@ export const GuaranteeSection: React.FC = () => {
           {/* Guarantee copy */}
           <div className="text-center sm:text-left">
             <span className="adesivo text-[10px] mb-2 inline-block">
-              ★ Risco Zero Absoluto
+              ★ Risco Zero
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-[#0B0D12] font-display mt-1">
-              Teste por 7 Dias. Se não amar, 100% de volta.
+              Garantia Incondicional de 7 Dias: Teste Sem Nenhum Risco
             </h3>
             <p className="mt-3 text-xs sm:text-sm text-[#3B3F4A] leading-relaxed font-medium">
-              Temos tanta certeza do poder transformador do método da <strong>Fontenelle Academy</strong> para a sua clínica que assumimos todo o risco financeiro.
+              Você tem 7 dias completos para testar tudo. Acesse as aulas do <strong>Simetria Perfeita</strong>, aplique com a sua equipe os scripts e as planilhas.
             </p>
             <p className="mt-2 text-xs sm:text-sm text-[#3B3F4A] leading-relaxed font-medium">
-              Você se inscreve, assiste às aulas com sua secretária, baixa os scripts e usa as planilhas. Se por qualquer motivo achar que o treinamento não pagou o investimento, basta solicitar o reembolso na Cakto com um único clique. Devolvemos cada centavo, sem perguntas e sem letras miúdas.
+              Se você não ficar 100% satisfeito com o método e com a organização que ele proporciona para a sua clínica, basta solicitar na plataforma ou enviar um e-mail que reembolsamos todo o dinheiro, sem complicação.
             </p>
 
-            <div className="mt-5 flex flex-wrap items-center gap-4 text-xs font-bold text-[#0B0D12]">
-              <span className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border-2 border-[#0B0D12] shadow-[2px_2px_0_#0B0D12]">
-                <Lock className="w-4 h-4 text-[#0B0D12]" />
-                Processado com segurança via Cakto
-              </span>
-              <span className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border-2 border-[#0B0D12] shadow-[2px_2px_0_#0B0D12]">
-                <Award className="w-4 h-4 text-[#0B0D12]" />
-                Reembolso sem burocracia
-              </span>
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-bold text-[#0B0D12]">
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-nb text-xs font-black inline-flex items-center gap-2 py-3 px-6"
+              >
+                <span>QUERO ESCALAR MINHA CLÍNICA AGORA</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
 

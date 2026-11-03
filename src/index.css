@@ -5,21 +5,20 @@
     --pp: #F7F5F0;
     --dot: rgba(11, 13, 18, 0.08);
     --tex: radial-gradient(circle, var(--dot) 1.5px, transparent 1.9px) 0 0 / 24px 24px;
-    --tex-tinta: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1.4px, transparent 1.9px) 0 0 / 24px 24px;
+    --tex-tinta: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1.4px, transparent 1.9px) 0 0 / 24px 24px;
     --ink: #0B0D12;
     --ink6: #3B3F4A;
     --ink4: #5E626D;
     --ink2: #D9D4C8;
     --creme: #F7F5F0;
     --ac: #8495A6;
-    --ac-dark: #435565;
+    --ac-dark: #5B6D7E;
+    --ac-deep: #485766;
     --ac2: #E1E7EE;
     --mk: #D6BE96;
     --mk-dark: #C2A473;
     --ok: #17A354;
     --no: #E1432F;
-    --cod: #12151C;
-    --cod2: #1C1F26;
     --fd: 'Space Grotesk', system-ui, sans-serif;
     --fm: 'IBM Plex Mono', ui-monospace, monospace;
     --bw: 3.5px;
@@ -57,30 +56,22 @@
   box-shadow: calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--ink);
 }
 
-.nb-interactive {
-  cursor: pointer;
-}
-
-.nb-interactive:active {
-  transform: translate(var(--sh), var(--sh));
-  box-shadow: 0 0 0 var(--ink);
-}
-
 .nb.tinta {
-  background: var(--ink);
+  background: var(--ac);
   color: #FFFFFF;
-  box-shadow: var(--sh) var(--sh) 0 var(--mk);
-}
-
-.nb.dourado {
-  background: var(--mk);
   border: var(--bw) solid var(--ink);
   box-shadow: var(--sh) var(--sh) 0 var(--ink);
 }
 
-.nb.azul {
-  background: var(--ac);
+.nb.azul-profundo {
+  background: var(--ac-dark);
   color: #FFFFFF;
+  border: var(--bw) solid var(--ink);
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+}
+
+.nb.dourado {
+  background: var(--mk);
   border: var(--bw) solid var(--ink);
   box-shadow: var(--sh) var(--sh) 0 var(--ink);
 }
@@ -110,10 +101,10 @@
 }
 
 .adesivo-tinta {
-  background: var(--ink);
-  color: var(--mk);
-  border: 2.5px solid var(--mk);
-  box-shadow: 3px 3px 0 var(--mk);
+  background: var(--ac-dark);
+  color: #FFFFFF;
+  border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 /* The Highlighter Marker Effect */
@@ -127,7 +118,7 @@
 }
 
 .secao-tinta .mk {
-  color: var(--ink);
+  color: #0B0D12;
   background: linear-gradient(var(--mk), var(--mk)) no-repeat 0 65% / 100% 86%;
 }
 
@@ -168,14 +159,15 @@
   color: #FFFFFF;
 }
 
-.btn-nb-tinta {
-  background: var(--ink);
+/* Sections with Azul Acinzentado (#8495A6) background replacing dark black */
+.secao-tinta {
+  background-color: var(--ac);
+  background-image: var(--tex-tinta);
   color: #FFFFFF;
 }
 
-/* Dark Section with Dotted Canvas */
-.secao-tinta {
-  background-color: var(--ink);
+.secao-tinta-deep {
+  background-color: var(--ac-dark);
   background-image: var(--tex-tinta);
   color: #FFFFFF;
 }
@@ -208,7 +200,7 @@
   background: #F7F5F0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0B0D12;
+  background: #8495A6;
   border: 2px solid #F7F5F0;
   border-radius: 4px;
 }

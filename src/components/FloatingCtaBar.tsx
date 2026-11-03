@@ -31,14 +31,14 @@ export const FloatingCtaBar: React.FC = () => {
         {/* Left price and condition note */}
         <div className="flex items-center gap-2.5">
           <span className="adesivo text-[9px] py-0.5 px-2 hidden sm:inline-block">
-            ★ PROMOÇÃO
+            ★ MÉTODO 3²
           </span>
           <div className="text-left leading-tight">
             <span className="text-[11px] text-[#5E626D] font-bold block sm:inline sm:mr-1.5">
-              Condição Exclusiva:
+              Simetria Perfeita:
             </span>
             <strong className="text-xs sm:text-sm text-[#0B0D12] font-black font-mono">
-              12x de R$ 29,82 <span className="text-[#5E626D] font-medium text-[11px] font-sans">(ou R$ 297 no Pix)</span>
+              12x de R$ 41,01 <span className="text-[#5E626D] font-medium text-[11px] font-sans">(ou R$ 397 no Pix)</span>
             </strong>
           </div>
         </div>
@@ -52,8 +52,7 @@ export const FloatingCtaBar: React.FC = () => {
             className="px-4 sm:px-6 py-2 text-xs sm:text-sm font-black text-[#0B0D12] bg-[#D6BE96] border-2 border-[#0B0D12] shadow-[2px_2px_0_#0B0D12] active:translate-x-0.5 active:translate-y-0.5 rounded-lg transition-all uppercase tracking-wider flex items-center gap-1.5 whitespace-nowrap shrink-0"
           >
             <Zap className="w-3.5 h-3.5 fill-[#0B0D12] text-[#0B0D12]" />
-            <span>Garantir Vaga</span>
-            <span className="hidden sm:inline">com Desconto</span>
+            <span>QUERO ESCALAR MINHA CLÍNICA</span>
             <span>→</span>
           </a>
 

@@ -4,18 +4,18 @@ import { CHECKOUT_URL } from '../data/landingData';
 
 export const ForWhoSection: React.FC = () => {
   const isForYou = [
-    'Você é dono(a) ou gestor(a) de clínica de estética, odontologia, dermatologia ou saúde.',
-    'Sente que a sua recepção "joga dinheiro no lixo" passando preços sem estratégia no WhatsApp.',
-    'Está cansado(a) de pacientes pedindo desconto ou dizendo que vão falar com o cônjuge.',
-    'Quer treinar sua secretária para ter postura comercial de alto padrão sem parecer vendedora chata.',
-    'Quer previsibilidade financeira vendendo planos e protocolos anuais de R$ 3.000 a R$ 10.000.'
+    'Proprietários e gestores de clínicas de estética, médicos, biomédicos estéticos e esteticistas.',
+    'Deseja crescer de forma estruturada, lucrativa e sustentável com o Método 3².',
+    'Quer organizar a operação, a rotina pessoal e a rotina da sua equipe sem sobrecarga.',
+    'Deseja transformar a recepção no WhatsApp em uma central ativa de fechamento de consultas.',
+    'Busca criar uma experiência 5 estrelas que gera fidelização eterna e indicações espontâneas.'
   ];
 
   const isNotForYou = [
-    'Você quer uma fórmula mágica para enriquecer do dia para a noite sem aplicar processos na clínica.',
-    'Você insiste em competir por preço baixo e fazer leilão com a clínica da esquina.',
+    'Busca promessas milagrosas e não está disposto a aplicar ferramentas e rotinas na clínica.',
+    'Quer continuar disputando pacientes por leilão de preços e promoções apelativas.',
     'Não tem interesse em treinar ou capacitar sua secretária e equipe de atendimento.',
-    'Não atende pacientes particulares e depende exclusivamente de convênios que pagam centavos.'
+    'Acredita que apenas cursos técnicos de aplicação de procedimentos resolvem a gestão do negócio.'
   ];
 
   return (
@@ -25,13 +25,13 @@ export const ForWhoSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="adesivo mb-3 inline-block">
-            Critério de Seleção
+            ★ Critério de Seleção
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0B0D12] font-display tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0B0D12] font-display tracking-tight leading-tight">
             Antes de comprar, <span className="block mt-1"><span className="mk">veja se é pra você.</span></span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#3B3F4A] font-medium">
-            Prezamos pela reputação da nossa academia e só queremos donos de clínicas comprometidos com resultados sérios:
+            O <strong>Simetria Perfeita</strong> foi desenhado exclusivamente para profissionais comprometidos com a excelência:
           </p>
         </div>
 
@@ -39,18 +39,18 @@ export const ForWhoSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           
           {/* Card: É PRA VOCÊ */}
-          <div className="nb bg-white p-6 sm:p-8 flex flex-col justify-between border-4 border-[#0B0D12]">
+          <div className="nb bg-white p-6 sm:p-8 flex flex-col justify-between border-4 border-[#0B0D12] shadow-[6px_6px_0_#0B0D12]">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold border-2 border-[#0B0D12]">
+                <div className="w-10 h-10 rounded-xl bg-[#8495A6] text-white flex items-center justify-center font-bold border-2 border-[#0B0D12]">
                   <Check className="w-6 h-6 stroke-[3]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-black text-[#0B0D12] font-display">
                     É para você se:
                   </h3>
-                  <span className="text-xs text-emerald-700 font-bold">
-                    Perfil Ideal de Aluno da Academia
+                  <span className="text-xs text-[#8495A6] font-black uppercase">
+                    Perfil Ideal de Gestor Simetria Perfeita
                   </span>
                 </div>
               </div>
@@ -67,15 +67,15 @@ export const ForWhoSection: React.FC = () => {
               </ul>
             </div>
 
-            <div className="mt-8 pt-6 border-t-2 border-[#0B0D12] bg-[#F7F5F0] -mx-6 -mb-6 p-6 rounded-b-xl">
-              <span className="text-xs font-bold text-emerald-800 block">
-                ✓ Se você se identificou com esse perfil, os resultados na sua clínica serão rápidos e expressivos.
+            <div className="mt-8 pt-5 border-t-2 border-[#0B0D12] bg-[#F7F5F0] -mx-6 -mb-6 p-6 rounded-b-xl">
+              <span className="text-xs font-bold text-[#0B0D12] block">
+                ✓ Se você se identificou, sua clínica está pronta para implementar o Método 3².
               </span>
             </div>
           </div>
 
           {/* Card: NÃO É PRA VOCÊ */}
-          <div className="nb bg-white p-6 sm:p-8 flex flex-col justify-between border-4 border-[#0B0D12]">
+          <div className="nb bg-white p-6 sm:p-8 flex flex-col justify-between border-4 border-[#0B0D12] shadow-[6px_6px_0_#0B0D12]">
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-bold border-2 border-[#0B0D12]">
@@ -85,8 +85,8 @@ export const ForWhoSection: React.FC = () => {
                   <h3 className="text-xl font-black text-[#0B0D12] font-display">
                     NÃO é para você se:
                   </h3>
-                  <span className="text-xs text-red-600 font-bold">
-                    Por favor, não compre se for o seu caso
+                  <span className="text-xs text-red-600 font-bold uppercase">
+                    Por favor, não se inscreva nesses casos
                   </span>
                 </div>
               </div>
@@ -103,9 +103,9 @@ export const ForWhoSection: React.FC = () => {
               </ul>
             </div>
 
-            <div className="mt-8 pt-6 border-t-2 border-[#0B0D12] bg-red-50/60 -mx-6 -mb-6 p-6 rounded-b-xl">
+            <div className="mt-8 pt-5 border-t-2 border-[#0B0D12] bg-red-50/60 -mx-6 -mb-6 p-6 rounded-b-xl">
               <span className="text-xs font-bold text-red-800 block">
-                ✕ Preferimos não vender caso o seu objetivo seja buscar atalhos sem estruturar processos.
+                ✕ O método exige comprometimento em aplicar processos e capacitar a equipe.
               </span>
             </div>
           </div>
@@ -115,10 +115,12 @@ export const ForWhoSection: React.FC = () => {
         {/* Transition CTA to Offer */}
         <div className="mt-12 text-center">
           <a
-            href="#oferta"
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-nb text-sm font-black inline-flex items-center gap-2"
           >
-            <span>Tenho o Perfil Certo · Ver Condição Especial</span>
+            <span>QUERO ESCALAR MINHA CLÍNICA AGORA</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

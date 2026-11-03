@@ -11,42 +11,42 @@ export const Header: React.FC = () => {
           href="/" 
           className="flex items-center gap-2.5 text-base sm:text-lg font-black tracking-tight text-[#0B0D12] whitespace-nowrap shrink-0 group"
         >
-          <span className="w-9 h-9 rounded-lg bg-[#0B0D12] text-[#D6BE96] flex items-center justify-center font-serif-luxury text-xl font-bold border-2 border-[#0B0D12] shadow-[2px_2px_0_#D6BE96]">
+          <span className="w-9 h-9 rounded-lg bg-[#8495A6] text-[#FFFFFF] flex items-center justify-center font-serif-luxury text-xl font-bold border-2 border-[#0B0D12] shadow-[2px_2px_0_#D6BE96]">
             F
           </span>
           <div className="flex flex-col leading-none">
             <span className="font-black tracking-wider text-sm sm:text-base font-display">
-              FONTENELLE
+              FONTENELLE ACADEMY
             </span>
-            <span className="text-[10px] tracking-widest text-[#8495A6] font-bold uppercase">
-              ACADEMY
+            <span className="text-[10px] tracking-widest text-[#8495A6] font-black uppercase">
+              SIMETRIA PERFEITA
             </span>
           </div>
         </a>
 
         {/* Zone 2: 4-5 concise navigation links */}
         <nav className="hidden lg:flex items-center gap-6 text-xs sm:text-sm font-bold text-[#0B0D12]">
-          <a href="#efeitos" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Efeitos & Scripts
-          </a>
           <a href="#metodo" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            O Método
+            Método 3²
           </a>
           <a href="#modulos" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Grade de Aulas
+            Grade (8 Módulos)
           </a>
-          <a href="#calculadora" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Simulador de Lucro
+          <a href="#simulador" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
+            Diagnóstico de Lucro
           </a>
-          <a href="#para-quem" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
-            Para Quem É
+          <a href="#mentor" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
+            Alexandre Fontinele
+          </a>
+          <a href="#oferta" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
+            Planos & Inscrição
           </a>
           <a href="#faq" className="hover:text-[#8495A6] transition-colors whitespace-nowrap shrink-0">
             Dúvidas
           </a>
         </nav>
 
-        {/* Zone 3: 1 primary action */}
+        {/* Zone 3: 1 primary action pointing to Cakto checkout */}
         <div className="flex items-center gap-3 shrink-0">
           <a
             href={CHECKOUT_URL}
@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
             rel="noopener noreferrer"
             className="px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-black text-[#0B0D12] bg-[#D6BE96] border-2 border-[#0B0D12] rounded-xl shadow-[3px_3px_0_#0B0D12] active:translate-x-0.5 active:translate-y-0.5 transition-all whitespace-nowrap shrink-0 flex items-center gap-1.5"
           >
-            <span>Garantir Vaga</span>
+            <span>Quero Escalar Minha Clínica</span>
             <span className="text-xs">→</span>
           </a>
         </div>

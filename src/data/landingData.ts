@@ -1,268 +1,294 @@
-import { ModuleItem, BonusItem, TestimonialItem, FaqItem } from '../types';
-
 export const CHECKOUT_URL = 'https://pay.cakto.com.br/3czvimn_919773';
 export const OFFICIAL_WEBSITE_URL = 'https://fontenelleacademy.com.br/';
 
-export const COURSE_MODULES: ModuleItem[] = [
+export interface ModuleItem {
+  id: number;
+  numberTag: string;
+  title: string;
+  subtitle: string;
+  duration: string;
+  deliverable: string;
+  lessons: string[];
+}
+
+export interface PlanItem {
+  id: string;
+  name: string;
+  tag: string;
+  featured: boolean;
+  originalPrice: string;
+  installments: string;
+  cashPrice: string;
+  benefits: string[];
+  ctaText: string;
+}
+
+export interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export const HERO_CHAPTERS = [
+  {
+    number: '01',
+    title: 'O Grande Gargalo Oculto das Clínicas de Estética',
+    subtitle: 'Por que profissionais excelentes continuam com caixa apertado e agenda desorganizada',
+    badge: 'Módulo de Diagnóstico'
+  },
+  {
+    number: '02',
+    title: 'A Metodologia do Método 3²',
+    subtitle: 'O alinhamento dos 3 pilares fundamentais: Estrutura, Performance e Experiência',
+    badge: 'O Núcleo Estratégico'
+  },
+  {
+    number: '03',
+    title: 'Como Dobrar o Ticket Médio das Consultas de Avaliação',
+    subtitle: 'A transição de procedimentos avulsos para planos de tratamento de alto valor',
+    badge: 'Performance Comercial'
+  },
+  {
+    number: '04',
+    title: 'A Jornada do Paciente 5 Estrelas & Plano de Ação',
+    subtitle: 'Experiência sensorial na recepção e protocolo estruturado de pós-procedimento',
+    badge: 'Fidelização & LTV'
+  }
+];
+
+export const THREE_PILLARS = [
+  {
+    number: '01',
+    pillar: 'PILAR 1: ESTRUTURA & GESTÃO',
+    subtitle: 'Organização, Processos & Rotina Harmoniosa',
+    description: 'Construa os alicerces operacionais da sua clínica com fluxos, rotinas e indicadores claros, permitindo que o negócio funcione com previsibilidade sem o dono precisar apagar incêndios.',
+    highlights: [
+      'Definição de papéis, funções e rotina diária sem sobrecarga',
+      'Painel de indicadores e controle para tomada de decisões',
+      'Processos operacionais padronizados para toda a equipe'
+    ],
+    metric: 'Organização total da rotina'
+  },
+  {
+    number: '02',
+    pillar: 'PILAR 2: PERFORMANCE COMERCIAL',
+    subtitle: 'Vendas Estratégicas & Recepção Ativa',
+    description: 'Transforme o WhatsApp e a recepção em uma central ativa de fechamento de consultas e planos de tratamento completos, reduzindo o no-show e elevando a conversão.',
+    highlights: [
+      'Scripts validados de primeiro contato para responder "quanto custa?"',
+      'Protocolo anti-no-show reduzindo faltas de 40% para menos de 8%',
+      'Consulta avaliativa consultiva com fechamento de planos de alto valor'
+    ],
+    metric: 'Até 1.8x mais conversão'
+  },
+  {
+    number: '03',
+    pillar: 'PILAR 3: JORNADA DO CLIENTE & ENCANTAMENTO',
+    subtitle: 'Fidelização & Indicação Espontânea',
+    description: 'Crie uma experiência sensorial inesquecível desde o primeiro clique até o pós-procedimento, transformando pacientes em defensores fiéis da sua marca.',
+    highlights: [
+      'Experiência Sensorial na Recepção (Assinatura olfativa, som calibrado e hotelaria 5 estrelas)',
+      'Protocolo de Pós-Procedimento & Cuidado D+1 e D+7 (Segurança e 90% NPS de satisfação)',
+      'Motor de Indicação & Recorrência Natural (Média de 3 a 4 novas indicações por paciente)'
+    ],
+    metric: '84% de taxa de recompra e manutenção'
+  }
+];
+
+export const COURSE_MODULES_8: ModuleItem[] = [
   {
     id: 1,
-    title: 'Fundação da Clínica Lucrativa & Posicionamento High-End',
-    badge: 'Módulo 01',
-    description: 'Como sair da guerra de preços e posicionar sua clínica como a opção mais desejada da sua região, atraindo pacientes dispostos a pagar pelo valor real do seu serviço.',
-    duration: '1h 45m · 6 aulas práticas',
-    keyDeliverable: 'Mapa de Posicionamento e Tabela de Percepção de Valor',
+    numberTag: 'MÓDULO 01',
+    title: 'O Método 3² & Diagnóstico da sua Clínica',
+    subtitle: 'Identificação dos gargalos invisíveis que travam o crescimento da sua clínica',
+    duration: '2h 15m',
+    deliverable: 'Mapa de Diagnóstico da Clínica',
     lessons: [
-      'A psicologia do paciente de alto poder aquisitivo no setor de saúde e estética',
-      'Como eliminar a comparação com concorrentes que cobram barato',
-      'Construção dos 7 pontos de contato de luxo (da fachada ao café da recepção)',
-      'A transição do dono operacional para o Dono Estrategista',
-      'Diagnóstico de vazamentos invisíveis de receita na sua operação',
-      'Definição da esteira de produtos e serviços para maximizar o ticket médio'
+      'Apresentação e fundamentos do Método 3²',
+      'Diagnóstico operacional e mapeamento de gargalos',
+      'A transição do dono operacional para o gestor estratégico',
+      'Alinhamento entre Estrutura, Performance e Experiência'
     ]
   },
   {
     id: 2,
-    title: 'O Script de Elite no WhatsApp & Recepção Vendedora',
-    badge: 'Módulo 02',
-    description: 'O exato método passo a passo para nunca mais responder apenas o preço quando o lead perguntar "Qual o valor?". Transforme secretárias em negociadoras de elite.',
-    duration: '2h 15m · 8 aulas práticas',
-    keyDeliverable: 'Playbook Oficial de Scripts Prontos para Copiar e Colar',
+    numberTag: 'MÓDULO 02',
+    title: 'Definindo suas Metas & Rotina Harmoniosa',
+    subtitle: 'Como planejar o crescimento e organizar o dia a dia sem sobrecarga',
+    duration: '2h 30m',
+    deliverable: 'Cronograma de Rotina Harmoniosa',
     lessons: [
-      'A anatomia da resposta perfeita nos primeiros 3 minutos de contato',
-      'O método das 3 perguntas investigativas que despertam desejo imediato',
-      'Como apresentar a consulta ou procedimento sem espantar o interessado',
-      'Script de contorno de objeções: "Vou ver e te aviso" e "Achei caro"',
-      'Técnicas de áudio persuasivo de 20 segundos que geram conexão humana',
-      'Rotina diária da recepcionista: metas de mensagens, follow-ups e confirmações',
-      'Como zerar o índice de "no-show" (pacientes que agendam e não aparecem)'
+      'Metodologia de metas para clínicas de estética',
+      'Organização da agenda do gestor e dos profissionais',
+      'Eliminação do desperdício de tempo e tarefas desnecessárias',
+      'A rotina diária, semanal e mensal de acompanhamento'
     ]
   },
   {
     id: 3,
-    title: 'Consulta Avaliativa de Alta Conversão (Sem Falar de Preço)',
-    badge: 'Módulo 03',
-    description: 'A metodologia de apresentação clínica que faz o paciente implorar pelo seu plano de tratamento completo, sem questionar valores ou pedir descontos.',
-    duration: '2h 00m · 7 aulas práticas',
-    keyDeliverable: 'Roteiro de Consulta de 4 Etapas e Formulário de Anamnese Estratégica',
+    numberTag: 'MÓDULO 03',
+    title: 'Indicadores e Controle da Operação',
+    subtitle: 'Acompanhe a saúde do seu negócio com dados simples e objetivos',
+    duration: '2h 45m',
+    deliverable: 'Painel de Indicadores Clínicos',
     lessons: [
-      'A preparação do ambiente e o acolhimento memorável nos primeiros minutos',
-      'O roteiro de perguntas para descobrir a dor emocional profunda do paciente',
-      'Como apresentar o plano de tratamento completo (e não apenas uma sessão avulsa)',
-      'A técnica da ancoragem de valor que torna o preço final imperceptível',
-      'Fechamento na sala de atendimento vs. Fechamento na recepção',
-      'Como lidar com: "Preciso falar com meu cônjuge primeiro"',
-      'Contratos de tratamento e alinhamento de expectativas para evitar cancelamentos'
+      'Os principais indicadores que todo dono de clínica deve monitorar',
+      'Controle de comparecimento, faltas e reagendamentos',
+      'Acompanhamento de conversão por canal de captação',
+      'Como tomar decisões estratégicas baseadas em fatos'
     ]
   },
   {
     id: 4,
-    title: 'Estruturação de Planos e Protocolos de Alto Valor (High-Ticket)',
-    badge: 'Módulo 04',
-    description: 'Como empacotar seus procedimentos em protocolos exclusivos de 3, 6 e 12 meses, gerando receita previsível e garantindo que o paciente permaneça na clínica.',
-    duration: '1h 50m · 5 aulas práticas',
-    keyDeliverable: 'Planilha de Precificação e Matriz de Montagem de Protocolos',
+    numberTag: 'MÓDULO 04',
+    title: 'A Secretária de Alta Performance no WhatsApp',
+    subtitle: 'Transformando sua recepção em uma central ativa de fechamento',
+    duration: '3h 15m',
+    deliverable: 'Playbook Completo de Mensagens WhatsApp • Tabela de Metas & Comissões',
     lessons: [
-      'Por que vender sessões isoladas está matando a margem da sua clínica',
-      'A fórmula para calcular o CAC e LTV real de cada paciente',
-      'Como batizar tratamentos com nomes proprietários que ninguém consegue comparar',
-      'Estruturação de planos de assinatura e recorrência estética/médica',
-      'Formas de pagamento facilitadas que aumentam a conversão em 45% sem gerar risco'
+      'Scripts de primeiro contato: como responder o "quanto custa o botox?"',
+      'Protocolo anti-no-show: reduzindo faltas de 40% para menos de 8%',
+      'Treinamento prático de atendimento ágil, humanizado e refinado',
+      'Acesso exclusivo ao script com mensagens que elevam o padrão de atendimento'
     ]
   },
   {
     id: 5,
-    title: 'Gestão de Equipe, Metas e Comissionamento Saudável',
-    badge: 'Módulo 05',
-    description: 'Crie uma cultura de alta performance onde suas recepcionistas, esteticistas, biomédicos ou dentistas trabalham com sangue nos olhos para bater metas diárias.',
-    duration: '1h 35m · 6 aulas práticas',
-    keyDeliverable: 'Calculadora de Comissionamento Progressivo e Dashboard de Metas',
+    numberTag: 'MÓDULO 05',
+    title: 'Fluxos, Processos & Funções da Equipe',
+    subtitle: 'Treinamento, capacitação e alinhamento do time de atendimento',
+    duration: '2h 40m',
+    deliverable: 'Manual de Funções e Processos da Equipe',
     lessons: [
-      'Como contratar recepcionistas e consultoras com perfil comercial agressivo e educado',
-      'O modelo de remuneração variável e premiações que não quebra o caixa',
-      'Reunião diária de 10 minutos (Daily Huddle) que alinha a equipe todo dia',
-      'Feedback corretivo e gestão de conflitos na equipe clínica',
-      'Plano de carreira simples que retém os melhores talentos da sua clínica'
+      'Mapeamento dos fluxos de trabalho da recepção à cabine de atendimento',
+      'Definição clara das responsabilidades de cada função',
+      'Roteiro de treinamento contínuo para colaboradoras',
+      'Cultura de comprometimento e foco no paciente'
     ]
   },
   {
     id: 6,
-    title: 'Máquina de Resgate de Pacientes Inativos & Automações',
-    badge: 'Módulo 06',
-    description: 'Ative o dinheiro esquecido na sua base de contatos. Métodos práticos para reativar pacientes que não voltam há mais de 90 dias com mensagens altamente atrativas.',
-    duration: '1h 40m · 5 aulas práticas',
-    keyDeliverable: 'Campanhas Prontas de Resgate em 3 Etapas para WhatsApp',
+    numberTag: 'MÓDULO 06',
+    title: 'Jornada de Encantamento & Retenção 5 Estrelas',
+    subtitle: 'A experiência sensorial que gera fidelização e indicações espontâneas',
+    duration: '3h 00m',
+    deliverable: 'Checklist de Design Sensorial e Pós-Procedimento',
     lessons: [
-      'O raio-x da sua base: como catalogar e segmentar pacientes inativos',
-      'A mensagem de "Checagem de Saúde/Estética" que traz de 15 a 30 retornos no mesmo dia',
-      'Campanhas sazonais inteligentes sem parecer "desesperado por vendas"',
-      'Automação de lembretes pós-procedimento que geram avaliações 5 estrelas no Google',
-      'O programa de indicação de pacientes VIP ("Membro traz Membro")'
+      'Design sensorial da clínica: olfato, som ambiente, recepção e conforto',
+      'Ritual de acolhimento e café de boas-vindas refinado',
+      'Protocolos de pós-atendimento D+1 e D+7 que geram extrema segurança',
+      'A equação do encantamento que transforma clientes em embaixadoras'
+    ]
+  },
+  {
+    id: 7,
+    numberTag: 'MÓDULO 07',
+    title: 'Marketing Consciente & Autoridade',
+    subtitle: 'Posicionamento refinado no Instagram e captação inteligente',
+    duration: '2h 50m',
+    deliverable: 'Guia de Posicionamento e Marketing Consciente',
+    lessons: [
+      'Posicionamento no Instagram como autoridade médica e estética refinada',
+      'Comunicação visual e verbal alinhada ao público ideal',
+      'Como atrair pacientes qualificados sem depender de promoções apelativas',
+      'Estratégias de conteúdo ético, educativo e de valor'
+    ]
+  },
+  {
+    id: 8,
+    numberTag: 'MÓDULO 08',
+    title: 'Expansão, Equipe & Escala da Clínica (Desafio 90 Dias)',
+    subtitle: 'Como sair do operacional e construir uma clínica que funciona sem você',
+    duration: '3h 10m',
+    deliverable: 'Plano de Ação Desafio 90 Dias',
+    lessons: [
+      'O passo a passo para delegar tarefas e sair do operacional diário',
+      'Estruturação para expansão sustentável da clínica',
+      'O Desafio 90 Dias de implementação guiada do Método 3²',
+      'Consolidação de uma clínica organizada por fora e por dentro'
     ]
   }
 ];
 
-export const EXCLUSIVE_BONUSES: BonusItem[] = [
+export const PLANS: PlanItem[] = [
   {
-    id: 1,
-    title: 'O Livro de Ouro de Scripts de WhatsApp para Secretárias',
-    tag: 'BÔNUS 01',
-    originalPrice: 'R$ 397,00',
-    description: 'Mais de 40 mensagens testadas e validadas para responder dúvidas de preço, contornar "vou pensar", reverter cancelamentos e confirmar agendamentos com taxa zero de falta.',
-    deliverables: [
-      'Scripts prontos organizados por tipo de especialidade',
-      'Áudios modelo gravados com tom de voz e cadência ideais',
-      'Versão em PDF editável para imprimir e deixar no balcão da recepção'
+    id: 'completo',
+    name: 'SIMETRIA PERFEITA COMPLETO',
+    tag: 'MAIS ESCOLHIDO',
+    featured: true,
+    originalPrice: 'R$ 1.197,00',
+    installments: '12x de R$ 41,01',
+    cashPrice: 'R$ 397 à vista',
+    benefits: [
+      'Acesso Imediato a Todos os 8 Módulos Completos (22h de Conteúdo)',
+      'Planilha Inteligente de Precificação 3² (Valor R$ 997)',
+      'Playbook de Scripts de WhatsApp da Secretária (Valor R$ 497)',
+      'Suporte Prioritário para Dúvidas na Plataforma',
+      'Garantia Incondicional de 7 Dias (Risco Zero)',
+      'Certificado Oficial Fontenelle Academy'
     ],
-    iconName: 'MessageSquareText'
+    ctaText: 'QUERO TRANSFORMAR MINHA CLÍNICA AGORA'
   },
   {
-    id: 2,
-    title: 'Planilha Dinâmica de Gestão Financeira, DRE & Comissões',
-    tag: 'BÔNUS 02',
-    originalPrice: 'R$ 297,00',
-    description: 'Tenha clareza milimétrica do seu lucro real por procedimento, custo fixo da hora clínica e comissões automáticas para sua equipe sem complicações.',
-    deliverables: [
-      'DRE automático simplificado para clínicas',
-      'Calculadora de custo/hora por sala de atendimento',
-      'Simulador de comissões por metas alcançadas'
+    id: 'vip',
+    name: 'PLANO VIP COM MENTORIA & ANÁLISE INDIVIDUAL',
+    tag: 'VAGAS LIMITADAS',
+    featured: false,
+    originalPrice: 'R$ 4.997,00',
+    installments: '12x de R$ 199,30',
+    cashPrice: 'R$ 1.997 à vista',
+    benefits: [
+      'Tudo incluído no Plano Completo Simetria Perfeita',
+      'Sessão Estratégica Individual 1 a 1 de Diagnóstico Clínico',
+      'Mentoria quinzenal de 2 meses com Alexandre Fontinele para fortalecer sua clínica',
+      'Auditoria dos Scripts de WhatsApp da sua Recepção',
+      'Estratégias de marketing, redes sociais, Google, abordagens, atendimento e jornada do cliente',
+      'Acesso Vitalício ao Conteúdo e Todas as Futuras Atualizações',
+      'Linha Direta de WhatsApp VIP com time de Mentores'
     ],
-    iconName: 'FileSpreadsheet'
-  },
-  {
-    id: 3,
-    title: 'Manual de Recepção VIP & Encantamento do Paciente',
-    tag: 'BÔNUS 03',
-    originalPrice: 'R$ 197,00',
-    description: 'O protocolo dos melhores centros médicos e estéticos do país para transformar a recepção em uma experiência de hotel 5 estrelas que fideliza no primeiro instante.',
-    deliverables: [
-      'Checklist de abertura e fechamento da clínica',
-      'Manual de etiqueta telefônica, postura física e vestimenta',
-      'Roteiro de acolhimento e café de boas-vindas memorável'
-    ],
-    iconName: 'Sparkles'
-  },
-  {
-    id: 4,
-    title: 'Masterclass Exclusiva: Oratória & Liderança com Alexandre Fontinele',
-    tag: 'BÔNUS 04',
-    originalPrice: 'R$ 497,00',
-    description: 'Aprenda a se comunicar com magnetismo, autoridade inabalável e clareza perante sua equipe, pacientes exigentes e nas redes sociais da sua clínica.',
-    deliverables: [
-      'Técnicas de presença e postura corporal para donos de clínica',
-      'Como gravar vídeos para o Instagram que atraem pacientes qualificados',
-      'Método de argumentação persuasiva para liderar sua equipe'
-    ],
-    iconName: 'Mic'
-  },
-  {
-    id: 5,
-    title: 'Acesso à Comunidade Fechada de Donos de Clínicas',
-    tag: 'BÔNUS 05',
-    originalPrice: 'Inestimável',
-    description: 'Faça networking com médicos, dentistas, biomédicos e donos de clínicas de todo o Brasil que faturam múltiplos 6 dígitos e compartilham estratégias em tempo real.',
-    deliverables: [
-      'Troca de fornecedores de insumos e equipamentos',
-      'Compartilhamento de campanhas que deram certo',
-      'Encontros mensais de tira-dúvidas ao vivo'
-    ],
-    iconName: 'Users'
+    ctaText: 'QUERO O PLANO VIP COM ANÁLISE INDIVIDUAL'
   }
 ];
 
-export const TESTIMONIALS: TestimonialItem[] = [
+export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    name: 'Dra. Camila Mendonça',
-    role: 'Dermatologista & Sócia-Diretora',
-    clinic: 'Clínica Lumina Dermatologia',
-    location: 'São Paulo - SP',
-    metric: '+R$ 68.000 no 1º mês',
-    quote: 'Minha secretária perdia quase 80% das pessoas que chamavam no WhatsApp só passando preço seco. Depois de aplicar os scripts e a postura do método Fontenelle, nosso fechamento de protocolos saltou de 18% para mais de 52%. Foi a melhor decisão para minha clínica.',
-    highlight: 'Triplicou o fechamento de protocolos corporais e faciais sem dar nenhum desconto.',
-    avatarSeed: 'Camila'
+    question: '1. Para quem é o curso Simetria Perfeita?',
+    answer: 'O curso foi desenvolvido para proprietários e gestores de clínicas de estética, sejam médicos, biomédicos estéticos ou esteticistas que desejam profissionalizar a gestão, elevar o ticket médio e criar uma experiência de alto padrão.'
   },
   {
     id: 2,
-    name: 'Dr. Rodrigo Alencar',
-    role: 'Cirurgião Dentista & Proprietário',
-    clinic: 'Alencar Odontologia Integrada',
-    location: 'Belo Horizonte - MG',
-    metric: 'Agenda cheia com 0 furos',
-    quote: 'Eu vivia estressado com salas vazias por conta de pacientes que desmarcavam em cima da hora. O protocolo de confirmação e a nova consulta avaliativa mudaram o jogo. As pessoas hoje chegam no horário e prontas para fechar o tratamento completo.',
-    highlight: 'Eliminou 95% do no-show e elevou o ticket médio para R$ 5.400 por paciente.',
-    avatarSeed: 'Rodrigo'
+    question: '2. Minha clínica ainda é pequena ou estou começando agora. O método funciona para mim?',
+    answer: 'Com certeza! Começar com os processos certos de organização e vendas evita erros caros que custam milhares de reais e anos de frustração. O método atende desde quem está abrindo o consultório até clínicas com filiais.'
   },
   {
     id: 3,
-    name: 'Dra. Vanessa Prado',
-    role: 'Biomédica Esteta & Gestora',
-    clinic: 'Instituto Vanessa Prado Estética',
-    location: 'Curitiba - PR',
-    metric: 'De R$ 42k para R$ 135k/mês',
-    quote: 'O que o Alexandre ensina sobre comunicação de autoridade e treinamento da recepção é outro nível. O curso se pagou literalmente no terceiro dia, quando minha recepcionista fechou um plano anual de R$ 9.600 usando exatamente o script do módulo 2.',
-    highlight: 'Faturamento mais que triplicou em 90 dias com a mesma equipe de 2 colaboradoras.',
-    avatarSeed: 'Vanessa'
-  }
-];
-
-export const FAQ_LIST: FaqItem[] = [
-  {
-    id: 1,
-    question: 'Para quais tipos de clínica este treinamento é indicado?',
-    answer: 'O método é 100% aplicável para clínicas de Estética Avançada, Dermatologia, Cirurgia Plástica, Odontologia, Harmonização Orofacial, Nutrição, Fisioterapia, Clínicas Médicas e Centros de Saúde Integrativa que vendem consultas, procedimentos ou planos de tratamento.',
-    category: 'curso'
-  },
-  {
-    id: 2,
-    question: 'Minha recepcionista ou secretária pode assistir às aulas?',
-    answer: 'Com certeza! Na verdade, recomendamos fortemente que sua secretária, recepcionista e equipe de atendimento assistam juntas aos Módulos 2 e 5. Eles foram pensados com linguagem didática e prática para que qualquer colaboradora consiga aplicar no WhatsApp no mesmo dia.',
-    category: 'curso'
-  },
-  {
-    id: 3,
-    question: 'Por quanto tempo terei acesso ao treinamento?',
-    answer: 'Você terá acesso completo durante 1 ano inteiro (365 dias), com direito a todas as atualizações de conteúdo, novos scripts e materiais complementares lançados na plataforma.',
-    category: 'acesso'
+    question: '3. Como recebo o acesso ao curso e às ferramentas?',
+    answer: 'Imediatamente após a confirmação do pagamento, você receberá um e-mail com os dados de login exclusivos na plataforma da Fontenelle Academy. As aulas, planilhas e bônus ficam disponíveis instantaneamente.'
   },
   {
     id: 4,
-    question: 'Como e quando recebo o acesso após a compra?',
-    answer: 'O acesso é imediato! Assim que o pagamento for aprovado pela Cakto (via Pix ou Cartão de Crédito), você receberá automaticamente em seu e-mail os dados de login e senha para acessar a área de membros exclusiva da Fontenelle Academy.',
-    category: 'acesso'
+    question: '4. Por quanto tempo terei acesso ao conteúdo?',
+    answer: 'No Plano Completo você tem 1 ano inteiro de acesso ilimitado para assistir no computador, celular ou tablet quantas vezes quiser. No Plano VIP o acesso é vitalício.'
   },
   {
     id: 5,
-    question: 'E se eu não gostar ou achar que não serve para a minha clínica?',
-    answer: 'Você conta com nossa Garantia Incondicional de 7 dias. Entre na plataforma, assista às aulas e baixe os scripts. Se você achar que o método não é para você, basta solicitar o reembolso com apenas um clique e nós devolveremos 100% do seu dinheiro, sem perguntas e sem letras miúdas.',
-    category: 'garantia'
+    question: '5. Posso liberar o acesso para minha secretária e equipe assistirem?',
+    answer: 'Sim! Os materiais e scripts de atendimento no WhatsApp, recepção e pós-venda foram desenhados para você passar diretamente para a sua equipe estudar e aplicar.'
   },
   {
     id: 6,
-    question: 'Quais são as formas de pagamento aceitas?',
-    answer: 'Você pode pagar através do Pix (com aprovação e acesso imediato em 1 minuto) ou parcelar em até 12x no cartão de crédito na plataforma Cakto com total segurança e criptografia bancária.',
-    category: 'pagamento'
-  }
-];
-
-export const PAIN_COMPARISON = [
-  {
-    problem: 'Sua recepção passa o preço de bate-pronto no WhatsApp e o paciente simplesmente desaparece ("sumiço total").',
-    solution: 'Script de 3 etapas que prende a atenção do lead, gera percepção de exclusividade e conduz ao agendamento sem falar de preço primeiro.'
+    question: '6. Como funciona a Garantia Blindada de 7 Dias?',
+    answer: 'Você tem 7 dias completos para testar tudo. Se não ficar 100% satisfeito, basta solicitar na plataforma ou enviar uma mensagem que reembolsamos todo o dinheiro, sem complicação.'
   },
   {
-    problem: 'Agenda cheia de consultas avaliativas, mas poucos fecham o tratamento completo porque pedem desconto ou "vão pensar".',
-    solution: 'Metodologia de Consulta Avaliativa em 4 passos com ancoragem de valor para fechar protocolos completos com pagamento à vista.'
+    id: 7,
+    question: '7. Terei suporte para tirar dúvidas durante o curso?',
+    answer: 'Sim! Abaixo de cada aula há um campo de dúvidas com suporte técnico, além das mentorias e da comunidade exclusiva de alunos.'
   },
   {
-    problem: 'O dono ou gestor passa o dia apagando incêndios, atendendo no consultório e sem tempo para gerenciar o negócio.',
-    solution: 'Processos claros de rotina, checklists diários e equipe treinada para operar e vender sem precisar do dono o tempo todo.'
-  },
-  {
-    problem: 'Equipe de atendimento acomodada, sem ambição e tratando pacientes como simples "fichas de cadastro".',
-    solution: 'Sistema de metas claras e comissionamento progressivo que faz suas recepcionistas vestirem a camisa da clínica.'
-  },
-  {
-    problem: 'Milhares de contatos parados no WhatsApp que vieram de anúncios e nunca mais voltaram a falar com a clínica.',
-    solution: 'Campanha comprovada de resgate de leads inativos capaz de reativar 20 a 40 pacientes já na sua primeira semana.'
+    id: 8,
+    question: '8. Quais são as formas de pagamento disponíveis?',
+    answer: 'Cartão de Crédito em até 12x (podendo dividir em até 2 cartões) e PIX à vista com liberação imediata.'
   }
 ];
